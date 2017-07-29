@@ -1,0 +1,189 @@
+$color-main: hsl(246, 70%, 33%);
+$color-secondary: hsl(32, 80%, 59%);
+$color-font: hsl(210, 1%, 59%);
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: white;
+  color: $color-font;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+    color: $color-font;
+    text-align: center;
+}
+h1 {
+    font-size: 71px;
+    font-family: "Courier New";
+    font-weight: 400;
+    @media screen and (max-width: 690px) {
+        font-size: 60px;
+    }
+    @media screen and (max-width: 580px) {
+        font-size: 36px;
+    }
+}
+
+footer {
+    width: 100%;
+    margin: 10px auto 5px auto;
+    text-align: center;
+    color: $color-font;
+    font-family: "PT Sans", sans-serif;
+    font-weight: lighter;
+}
+a {
+    text-decoration: none;
+    color: $color-font;
+    // width: 100%;
+    // height: 100%;
+}
+input,select,textarea {
+    font-size: 24px;
+}
+input[type=search] {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+input:focus {
+    outline: none;
+}
+ul {
+    width: 100%;
+}
+
+.container {
+    width: 100vw;
+    max-width: 690px;
+    height: 100vh;
+    margin: 0 auto;
+    @media screen and (max-width: 690px) {
+        width: 90%;
+    }
+    @media screen and (max-width: 580px) {
+        // font-size: 36px;
+    }
+}
+.form {
+    text-align: center;
+}
+.button {
+    padding: 10px 40px;
+    color: $color-font;
+    font-size: 13px;
+    background: none;
+    margin:  0 20px;
+    border: 1px solid $color-font;
+    &:hover {
+        cursor: pointer;
+        border-color: lighten($color-font, 20%);
+        // color: lighten($color-font, 15%)
+    }
+    &:focus {
+        outline: 0;
+    }
+}
+
+.search-bar {
+    border: 1px solid black;
+    padding: 8px 5px;
+    // width: 70%;
+    // margin: 0 auto;
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.5);
+}
+.button-box {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.result-card {
+    // opacity: 0;
+    list-style-type: none;
+    width: 100%;
+    // left: -100%;
+    color: black;
+    text-decoration: none;
+    border-left: solid 2px $color-main;
+    padding: 0 15px;
+    margin-top: 30px;
+    // margin: 0 auto;
+    // animation: fadeIn .7s ;
+    &:hover {
+        border-left: solid 4px $color-secondary;
+        transition-duration: .2s;
+    }
+}
+.slide-1,
+.slide-2,
+.slide-3,
+.slide-4,
+.slide-5,
+.slide-6,
+.slide-7,
+.slide-8,
+.slide-9,
+.slide-10 {
+    opacity: 0;
+    // position: block;
+    // margin-right: 100%;
+    // animation: slideIn .6s linear;
+    animation: fadeIn .6s linear;
+    animation-fill-mode: forwards;
+}
+@for $i from 1 through 10 {
+    .slide-#{$i} {
+        animation-delay: #{$i / 10}s;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        // margin-right: 100%;
+        transform: scale(.1);
+    }
+    85% {
+        opacity: 1;
+        // margin-right: -5%;
+        transform: scale(1.01);
+    }
+    100% {
+        opacity: 1;
+        // margin-right: 0%;
+        transform: scale(1);
+    }
+}
+@keyframes slideIn {
+    0% {
+        margin-right: 100%;
+    }
+    85% {
+        margin-right: 105%;
+    }
+    100% {
+        margin-right: 0;
+    }
+}
+
+// night mode
+body.night {
+    background: $color-main;
+}
+input.night {
+    background: $color-main;
+    color: $color-font;
+}
+.result-card.night {
+    border-left: 1px solid $color-secondary;
+    color: $color-font;
+}

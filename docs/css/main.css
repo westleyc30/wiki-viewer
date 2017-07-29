@@ -1,0 +1,131 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  background: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0; }
+
+header {
+  color: #959697;
+  text-align: center; }
+
+h1 {
+  font-size: 71px;
+  font-family: "Courier New";
+  font-weight: 400; }
+  @media screen and (max-width: 690px) {
+    h1 {
+      font-size: 60px; } }
+  @media screen and (max-width: 580px) {
+    h1 {
+      font-size: 36px; } }
+
+footer {
+  width: 100%;
+  margin: 10px auto 5px auto;
+  text-align: center;
+  color: #959697;
+  font-family: "PT Sans", sans-serif;
+  font-weight: lighter; }
+
+a {
+  text-decoration: none; }
+
+input[type=search] {
+  width: 100%;
+  height: 100%;
+  border: none; }
+
+input:focus {
+  outline: none; }
+
+ul {
+  width: 100%; }
+
+.container {
+  width: 100vw;
+  max-width: 690px;
+  height: 100vh;
+  margin: 0 auto; }
+  @media screen and (max-width: 690px) {
+    .container {
+      width: 90%; } }
+
+.form {
+  text-align: center; }
+
+.search-bar {
+  border: 1px solid black;
+  padding: 5px; }
+
+.result-card {
+  list-style-type: none;
+  width: 100%;
+  color: black;
+  text-decoration: none;
+  border-left: solid 2px navy;
+  padding: 0 15px;
+  margin-top: 30px; }
+
+.slide-1,
+.slide-2,
+.slide-3,
+.slide-4,
+.slide-5,
+.slide-6,
+.slide-7,
+.slide-8,
+.slide-9,
+.slide-10 {
+  opacity: 0;
+  animation: fadeIn .6s linear;
+  animation-fill-mode: forwards; }
+
+.slide-1 {
+  animation-delay: .1s; }
+
+.slide-2 {
+  animation-delay: .2s; }
+
+.slide-3 {
+  animation-delay: .3s; }
+
+.slide-4 {
+  animation-delay: .4s; }
+
+.slide-5 {
+  animation-delay: .5s; }
+
+.slide-6 {
+  animation-delay: .6s; }
+
+.slide-7 {
+  animation-delay: .7s; }
+
+.slide-8 {
+  animation-delay: .8s; }
+
+.slide-9 {
+  animation-delay: .9s; }
+
+.slide-10 {
+  animation-delay: 1.0s; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    margin-right: 100%;
+    transform: scale(0.1); }
+  85% {
+    opacity: 1;
+    margin-right: -5%;
+    transform: scale(1.01); }
+  100% {
+    opacity: 1;
+    margin-right: 0%;
+    transform: scale(1); } }

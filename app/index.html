@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wiki Viewer</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Wikipedia Viewer</h1>
+    </header>
+    <section class="search-form">
+        <div class="search-bar">
+            <input id="searchTerm" type="search" placeholder="Search...">
+        </div>
+        <div class="button-box">
+            <button class="button btn-submit" id="searchBtn">search</button>
+            <a href="https://en.wikipedia.org/wiki/Special:Random" target="blank"><button class=" button btn-random" id="randomBtn">random</button></a>
+        </div>
+    </section>
+    <section class="output-box">
+        <div id="output">
+
+        </div>
+    </section>
+
+    <footer>
+        <h6>coded by westley cho</h6>
+    </footer>
+
+</div><!-- container end -->
+<!-- <script src="../node_modules/angular/angular.js"></script> -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
