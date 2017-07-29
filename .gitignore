@@ -41,7 +41,6 @@ Thumbs.db
 package.json
 .vscode
 gulp.config.js
-gulpfile.js
 package.json
 yarn.lock
 node_modules/

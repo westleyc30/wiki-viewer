@@ -5,8 +5,8 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #fff;
-  color: #000;
+  background: white;
+  color: #959697;
   margin: 0;
   padding: 0; }
 
@@ -34,7 +34,11 @@ footer {
   font-weight: lighter; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #959697; }
+
+input, select, textarea {
+  font-size: 24px; }
 
 input[type=search] {
   width: 100%;
@@ -59,18 +63,40 @@ ul {
 .form {
   text-align: center; }
 
+.button {
+  padding: 10px 40px;
+  color: #959697;
+  font-size: 13px;
+  background: none;
+  margin: 0 20px;
+  border: 1px solid #959697; }
+  .button:hover {
+    cursor: pointer;
+    border-color: #c9c9ca; }
+  .button:focus {
+    outline: 0; }
+
 .search-bar {
   border: 1px solid black;
-  padding: 5px; }
+  padding: 8px 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+
+.button-box {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center; }
 
 .result-card {
   list-style-type: none;
   width: 100%;
   color: black;
   text-decoration: none;
-  border-left: solid 2px navy;
+  border-left: solid 2px #25198f;
   padding: 0 15px;
   margin-top: 30px; }
+  .result-card:hover {
+    border-left: solid 4px #ea9c43;
+    transition-duration: .2s; }
 
 .slide-1,
 .slide-2,
@@ -87,45 +113,61 @@ ul {
   animation-fill-mode: forwards; }
 
 .slide-1 {
-  animation-delay: .1s; }
+  animation-delay: 0.1s; }
 
 .slide-2 {
-  animation-delay: .2s; }
+  animation-delay: 0.2s; }
 
 .slide-3 {
-  animation-delay: .3s; }
+  animation-delay: 0.3s; }
 
 .slide-4 {
-  animation-delay: .4s; }
+  animation-delay: 0.4s; }
 
 .slide-5 {
-  animation-delay: .5s; }
+  animation-delay: 0.5s; }
 
 .slide-6 {
-  animation-delay: .6s; }
+  animation-delay: 0.6s; }
 
 .slide-7 {
-  animation-delay: .7s; }
+  animation-delay: 0.7s; }
 
 .slide-8 {
-  animation-delay: .8s; }
+  animation-delay: 0.8s; }
 
 .slide-9 {
-  animation-delay: .9s; }
+  animation-delay: 0.9s; }
 
 .slide-10 {
-  animation-delay: 1.0s; }
+  animation-delay: 1s; }
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    margin-right: 100%;
     transform: scale(0.1); }
   85% {
     opacity: 1;
-    margin-right: -5%;
     transform: scale(1.01); }
   100% {
     opacity: 1;
-    margin-right: 0%;
     transform: scale(1); } }
+
+@keyframes slideIn {
+  0% {
+    margin-right: 100%; }
+  85% {
+    margin-right: 105%; }
+  100% {
+    margin-right: 0; } }
+
+body.night {
+  background: #25198f; }
+
+input.night {
+  background: #25198f;
+  color: #959697; }
+
+.result-card.night {
+  border-left: 1px solid #ea9c43;
+  color: #959697; }
