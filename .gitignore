@@ -45,3 +45,4 @@ package.json
 yarn.lock
 node_modules/
 .eslintrc.json
+.xd
